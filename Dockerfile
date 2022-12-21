@@ -5,6 +5,6 @@ RUN make clean \
   && make test \
   && make
 
-FROM ubuntu:xenial
+FROM ubuntu:focal
 COPY --from=0 /src/event-forwarder-gelf /event-forwarder-gelf
 ENTRYPOINT ["/event-forwarder-gelf"]

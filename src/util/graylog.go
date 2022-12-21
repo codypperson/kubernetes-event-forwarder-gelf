@@ -7,8 +7,8 @@ import (
 
 func GetGelfWriter(host, port string) gelf.Writer {
 	graylogEndpoint := host + ":" + port
-	glog.Infof("connecting to %s", graylogEndpoint)
-	gelfWriter, err := gelf.NewTCPWriter(graylogEndpoint)
+	glog.Infof("GELF UDP destination: %s", graylogEndpoint)
+	gelfWriter, err := gelf.NewUDPWriter(graylogEndpoint)
 	if err != nil {
 		glog.Fatal(err)
 	}

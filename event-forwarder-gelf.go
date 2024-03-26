@@ -5,8 +5,8 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/xing/event-forwarder-gelf/src"
-	"github.com/xing/event-forwarder-gelf/src/util"
+	"github.com/codypperson/event-forwarder-gelf/src"
+	"github.com/codypperson/event-forwarder-gelf/src/util"
 )
 
 // VERSION represents the current version of the release.

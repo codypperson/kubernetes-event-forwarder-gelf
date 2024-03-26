@@ -1,7 +1,6 @@
 .PHONY: install clean test image push-image release perform-release
 
-IMAGE := xingse/event-forwarder-gelf
-BRANCH = $(shell git rev-parse --abbrev-ref HEAD)
+IMAGE := codypperson/event-forwarder-gelf
 
 all: event-forwarder-gelf
 

@@ -1,10 +1,10 @@
-FROM golang:1.16
+FROM golang:1.17
 COPY . /src/
 WORKDIR /src/
 RUN make clean \
   && make test \
   && make
 
-FROM ubuntu:focal
+FROM ubuntu:jammy
 COPY --from=0 /src/event-forwarder-gelf /event-forwarder-gelf
 ENTRYPOINT ["/event-forwarder-gelf"]
